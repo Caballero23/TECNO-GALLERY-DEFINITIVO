@@ -1,3 +1,7 @@
+Primer Proyecto de clase del módulo Desarrollo Web en Entorno Servidor
+
+
+
 TECNO GALLERY 
 
 WEB de ventas de moviles y accesorios.
@@ -7,4 +11,6 @@ Cada accesorio esta asociado a un movil por lo cual si borramos un movil de la b
 
 
 Tambien hay una tienda fisica en zaragoza, he incluido un mapa para que los clientes sepan donde esta situada.
+
+CPIFP Los Enlaces
 
