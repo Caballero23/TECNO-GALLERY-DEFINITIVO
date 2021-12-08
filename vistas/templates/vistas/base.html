@@ -1,0 +1,71 @@
+
+<html>
+
+    <head>
+    
+      {% load static %}
+    
+        <!-- Bootstrap -->
+        <link href="{% static 'vistas/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    
+         <!-- Fonts -->
+        
+         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+         
+    
+        <!-- Styles -->
+        <link href="{% static 'vistas/css/gestion.css' %}" rel="stylesheet">
+    </head>
+    
+    <body>
+     
+        {% include 'vistas/sidebar.html' %}
+        
+      </h1>
+    {% block content %}
+
+
+    
+
+
+    {% endblock %}
+      
+    
+    
+        <!-- Footer -->
+        <footer class="footer text-faded text-center py-5">
+          <div class="container">
+            <p class="m-0">
+                <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+                <a href="#" class="link">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+            </p>
+            
+            <p class="m-0 mbt1">&copy; Tecno Gallery</p>
+          </div>
+        </footer>
+    
+        <!-- Bootstrap -->
+        <script src="{% static 'vistas/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vistas/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    
+    </body>
+    
+    
+    </html>

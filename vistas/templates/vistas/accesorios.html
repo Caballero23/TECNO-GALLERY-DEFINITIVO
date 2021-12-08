@@ -1,0 +1,88 @@
+{% extends "vistas/base.html" %}
+
+<html>
+
+
+
+  {% load static %}
+
+  {% block content %}
+
+   
+   
+
+<body>
+
+    
+
+
+ 
+  
+  <h2 class="site-heading text-center text-black d-none d-lg-block">
+      
+    <span class="site-heading-lower">ACCESORIOS</span>
+  </h2>
+
+
+
+  <div align="center"><h1 class="titulo2">
+  FUNDAS
+  </h1></div>
+
+<br>
+{% for f in fundas %}
+
+<div align="center" class="todo" ><p>
+
+<h2 class="titulo">{{f.nombre}}</h2>
+<p>Movil: {{f.movil.nombre}}</p>
+<p>Color: {{f.color}}</p>
+<p><img src="{{f.imagen.url}}" width="200" height="200"></p>
+<p class="caja">{{f.precio}}</p>
+<br>
+<p align="center">-------------------------------------------------</p>
+<br>
+
+</p></div>
+
+{% endfor %}
+
+
+<div align="center"><h1 class="titulo2">
+  PROTECTORES
+  </h1></div>
+  <br>
+  {% for p in protector %}
+
+  <div align="center" class="todo" ><p>
+  
+  <h2 class="titulo">{{p.nombre}}</h2>
+  <p>Movil: {{p.movil.nombre}}</p>
+  <p><img src="{{p.imagen.url}}" width="200" height="200"></p>
+  <p class="caja">{{p.precio}}</p>
+  <br>
+  <p>-------------------------------------------------</p>
+  <br>
+  
+  </p></div>
+  
+  {% endfor %}
+
+
+
+
+
+<br><br>
+  
+
+
+   
+
+</body>
+
+
+</html>
+
+
+
+{% endblock%}

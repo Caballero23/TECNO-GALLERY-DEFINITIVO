@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark  fixed-top py-lg-3" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">Gestión de Pedidos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarResponsive">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
+        </li>
+        <li class="nav-item {% if request.path == '/moviles/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'moviles' %}">moviles</a>
+        </li>
+        <li class="nav-item {% if request.path == '/accesorios/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'accesorios' %}">accesorios</a>
+        </li>
+        <li class="nav-item {% if request.path == '/contact/contact/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
+        </li>
+        <li class="nav-item {% if request.path == '/donde_estamos/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'donde_estamos' %}">Donde estamos</a>
+        </li>
+        <li class="nav-item {% if request.path == '/añadir/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'añadir' %}">Añadir</a>
+        </li>
+       
+        </li>
+        <li class="nav-item {% if request.path == '/buscamoviles/' %}active{% endif %} px-lg-4">
+          <a class="nav-link text-uppercase text-expanded" href="{% url 'buscamoviles' %}">buscamoviles</a>
+        </li>
+        
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+<br>   <br>
+<h1 class="site-heading text-center text-black d-none d-lg-block">

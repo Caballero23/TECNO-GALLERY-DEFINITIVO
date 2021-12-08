@@ -1,0 +1,68 @@
+{% extends "vistas/base.html" %}
+
+<html>
+
+<head>
+
+  {% load static %}
+
+  {% block content %}
+
+   
+  
+
+<body>
+
+    
+
+
+ 
+  
+  <h1 class="site-heading text-center text-black d-none d-lg-block">
+      
+    <span class="site-heading-lower">Móviles</span>
+  </h1>
+
+
+
+
+
+  {% for carac in moviles %}
+
+<div align="center" class="todo" ><p>
+
+<h2 class="titulo">{{carac.nombre}}</h2>
+<p>RAM: {{carac.ram}}</p>
+<p>CAPACIDAD: {{carac.capacidad}}</p>
+<p>MPX: {{carac.mpx_camara}}</p>
+<p>TAMAÑO: {{carac.tamaño}}</p>
+<p><img src="{{carac.imagen.url}}" width="200" height="200"></p>
+<p class="caja">{{carac.precio}}</p>
+<br>
+<a href="{% url 'modificar' carac.id  %}" class="btn btn-primary ">modificar</a>
+<a href="{% url 'eliminar' carac.id  %}" class="btn btn-danger btn-primary ">eliminar</a>
+
+<p>-------------------------------------------------</p>
+<br>
+
+</p></div>
+
+{% endfor %}
+
+
+
+
+
+<br><br>
+  
+
+   
+
+</body>
+
+
+</html>
+
+
+
+{% endblock%}

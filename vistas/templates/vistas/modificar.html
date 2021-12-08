@@ -1,0 +1,52 @@
+{% extends "vistas/base.html" %}
+
+
+{% load static %}
+
+{% block content %}
+
+<html>
+
+
+
+  {% load static %}
+
+   
+
+<body>
+ 
+  <h1 class="site-heading text-center text-black d-none d-lg-block">
+      
+    <span class="site-heading-lower">Modificar</span>
+  </h1>
+
+ 
+
+  {% load crispy_forms_tags %}
+  <div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{ form | crispy}}
+        <br>
+
+        <br>
+        <div class="d-flex justify-contet-center">
+       <input type="reset" value="cancelar"  class="btn btn-secondary">
+       <input type="submit" value="Modificar"  class="btn btn-primary">
+        </div></div>
+    </form>
+{{mensaje}}
+
+
+</div>
+
+
+
+</body>
+
+
+</html>
+{% endblock %}

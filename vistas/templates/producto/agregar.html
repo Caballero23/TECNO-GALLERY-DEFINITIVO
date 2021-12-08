@@ -1,0 +1,72 @@
+{% extends "vistas/base.html" %}
+
+
+{% load static %}
+
+{% block content %}
+
+<html>
+
+<head>
+
+  {% load static %}
+
+    <!-- Bootstrap -->
+    <link href="{% static 'vistas/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+
+    <!-- Styles -->
+    <link href="{% static 'vistas/css/gestion.css' %}" rel="stylesheet">
+</head>
+
+<body>
+ 
+  <h1 class="site-heading text-center text-black d-none d-lg-block">
+      
+    <span class="site-heading-lower">Listar</span>
+  </h1>
+
+ <div class="card">
+
+ <div class="card-body">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+
+    <form action="" method="post">
+
+        {% csrf_token %}
+        {{ form }}
+
+        <div class="d-flex justify-contet-center">
+       <input type="reset" value="cancelar"  class="btn btn-secondary">
+       <input type="submit" value="Guardar"  class="btn btn-primary">
+        </div>
+    </form>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+ </div>
+
+
+
+
+ 
+</body>
+
+
+</html>
+{% endblock %}

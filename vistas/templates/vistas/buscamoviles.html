@@ -1,0 +1,45 @@
+{% extends "vistas/base.html" %}
+
+
+
+
+{% block content %}
+<h1>Búsqueda en Moviles</h1>
+
+<hr>
+<!-- formulario de búsqueda -->
+<form class="form-inline mt-2 mt-md-0" action="{% url 'buscamoviles' %}"
+    method="get">
+    <input 
+        name="q" 
+        class="form-control mr-sm-2" 
+        type="text" 
+        placeholder="Introduce el movil"
+        {% if query %}
+            value = {{query}}
+        {% endif %}
+        aria-label="Search">
+</form>
+
+<!-- fin formuoario-->
+<div class="row mt-4">
+<hr>
+<div class="col-md-12">
+{%if noencontrado %} 
+<h3 class="error">Mensaje no encontrado</h3>
+{% else %}
+
+<ul>
+    {% for carac in moviles %}
+
+    <div align="center" class="todo" ><p>
+    
+        <a href="{% url 'buscamovil' carac.nombre  %}"></a>
+    
+    {% endfor %}
+
+{% endif %}
+</div>
+</div>
+<br> <br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> <br> <br> <br><br> <br> <br> <br> <br>
+{% endblock%}
